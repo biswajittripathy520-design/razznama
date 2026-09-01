@@ -6,13 +6,13 @@
     <title>Creator Dashboard - Razznama</title>
     <style>
         :root {
-            --bg-dark: #0f1117;
-            --bg-card: #181b24;
+            --bg-dark: #0b0c10;
+            --bg-card: #151821;
             --accent-gold: #e5a93c;
             --accent-crimson: #c93b3b;
             --text-main: #f0f2f5;
-            --text-muted: #9ba1b0;
-            --border-color: #262b3a;
+            --text-muted: #8c93a4;
+            --border-color: #222736;
         }
 
         * {
@@ -30,6 +30,86 @@
             flex-direction: column;
         }
 
+        /* --- Login Box Screen --- */
+        #login-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+
+        .login-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .login-title {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-subtitle {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pin-input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: #0f1117;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 1rem;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            outline: none;
+        }
+
+        .pin-input:focus {
+            border-color: var(--accent-gold);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--accent-gold);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .error-msg {
+            color: var(--accent-crimson);
+            font-size: 0.85rem;
+            margin-top: 0.75rem;
+            display: none;
+        }
+
+        /* --- Admin Dashboard Layout --- */
+        #dashboard-content {
+            display: none;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
         header {
             background-color: var(--bg-card);
             border-bottom: 1px solid var(--border-color);
@@ -40,24 +120,30 @@
         }
 
         .brand-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 800;
             color: var(--accent-gold);
             letter-spacing: 1px;
             text-decoration: none;
         }
 
-        .back-link {
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn-secondary {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             padding: 0.4rem 0.8rem;
             border-radius: 6px;
             border: 1px solid var(--border-color);
-            transition: 0.2s ease;
+            background: transparent;
+            cursor: pointer;
         }
 
-        .back-link:hover {
+        .btn-secondary:hover {
             color: var(--text-main);
             border-color: var(--accent-gold);
         }
@@ -73,12 +159,11 @@
         .page-title {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            color: var(--text-main);
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1.25rem;
             margin-bottom: 2rem;
         }
@@ -91,14 +176,15 @@
         }
 
         .card-header {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
             color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
         }
 
         .stat-number {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 0.25rem;
         }
@@ -116,7 +202,7 @@
         }
 
         .series-item {
-            padding: 1rem 1.25rem;
+            padding: 1.25rem;
             border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
@@ -129,6 +215,7 @@
 
         .series-name {
             font-weight: 600;
+            font-size: 1.05rem;
             margin-bottom: 0.25rem;
         }
 
@@ -139,68 +226,126 @@
 
         .badge {
             display: inline-block;
-            padding: 0.25rem 0.6rem;
+            padding: 0.2rem 0.5rem;
             border-radius: 4px;
             font-size: 0.75rem;
             font-weight: 600;
             background: rgba(229, 169, 60, 0.15);
             color: var(--accent-gold);
+            margin-left: 0.5rem;
         }
 
-        .btn-action {
+        .btn-view {
             background-color: var(--accent-gold);
             color: #000;
             font-weight: 600;
             border: none;
             padding: 0.5rem 1rem;
             border-radius: 6px;
-            cursor: pointer;
             text-decoration: none;
             font-size: 0.85rem;
-            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <header>
-        <a href="../index.html" class="brand-title">RAZZNAMA CREATOR</a>
-        <a href="../index.html" class="back-link">← Public Site</a>
-    </header>
 
-    <main>
-        <h1 class="page-title">Creator Overview</h1>
-
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">Active Series</div>
-                <div class="stat-number">1</div>
-                <div class="stat-desc">Divine Ascent</div>
-            </div>
-            <div class="card">
-                <div class="card-header">Total Chapters</div>
-                <div class="stat-number">2</div>
-                <div class="stat-desc">Chapters 1 & 2 published</div>
-            </div>
-            <div class="card">
-                <div class="card-header">Publishing Status</div>
-                <div class="stat-number">Online</div>
-                <div class="stat-desc">GitHub Pages Ready</div>
-            </div>
+    <!-- Creator Passcode Lock -->
+    <div id="login-screen">
+        <div class="login-card">
+            <div class="login-title">RAZZNAMA CREATOR</div>
+            <div class="login-subtitle">Enter admin passcode to manage series</div>
+            <input type="password" id="passcode" class="pin-input" placeholder="••••••••" autocomplete="off" />
+            <button class="btn-submit" onclick="unlockDashboard()">Enter Dashboard</button>
+            <div id="error-msg" class="error-msg">Incorrect passcode. Try again.</div>
         </div>
+    </div>
 
-        <h2 style="font-size: 1.2rem; margin-bottom: 1rem;">My Series Library</h2>
-        <div class="series-list">
-            <div class="series-item">
-                <div>
-                    <div class="series-name">Divine Ascent <span class="badge">Active</span></div>
-                    <div class="series-meta">Fantasy · Action · Cultivation · 2 Chapters</div>
+    <!-- Protected Creator Dashboard -->
+    <div id="dashboard-content">
+        <header>
+            <a href="../index.html" class="brand-title">RAZZNAMA CREATOR</a>
+            <div class="header-actions">
+                <a href="../index.html" class="btn-secondary">Public Site</a>
+                <button class="btn-secondary" onclick="logout()">Lock / Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <h1 class="page-title">Creator Overview</h1>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">Active Series</div>
+                    <div class="stat-number">1</div>
+                    <div class="stat-desc">Divine Ascent</div>
                 </div>
-                <div>
-                    <a href="../series/divine-ascent/chapter-01.html" class="btn-action">View Reader</a>
+                <div class="card">
+                    <div class="card-header">Total Chapters</div>
+                    <div class="stat-number">2</div>
+                    <div class="stat-desc">Chapters 1 & 2 published</div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Publishing Status</div>
+                    <div class="stat-number" style="color: #4ade80;">Online</div>
+                    <div class="stat-desc">GitHub Pages Active</div>
                 </div>
             </div>
-        </div>
-    </main>
+
+            <h2 style="font-size: 1.2rem; margin-bottom: 1rem;">Published Works</h2>
+            <div class="series-list">
+                <div class="series-item">
+                    <div>
+                        <div class="series-name">Divine Ascent: Rise of the Celestial Heir <span class="badge">Live</span></div>
+                        <div class="series-meta">Fantasy · Action · Cultivation · 2 Chapters Active</div>
+                    </div>
+                    <div>
+                        <a href="../series/divine-ascent/chapter-01.html" class="btn-view">Open Reader</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Set your private passcode here:
+        const ADMIN_KEY = "razz2026";
+
+        function checkAuth() {
+            if (sessionStorage.getItem("razznama_auth") === "true") {
+                document.getElementById("login-screen").style.display = "none";
+                document.getElementById("dashboard-content").style.display = "flex";
+            } else {
+                document.getElementById("login-screen").style.display = "flex";
+                document.getElementById("dashboard-content").style.display = "none";
+            }
+        }
+
+        function unlockDashboard() {
+            const entered = document.getElementById("passcode").value;
+            const errorMsg = document.getElementById("error-msg");
+
+            if (entered === ADMIN_KEY) {
+                sessionStorage.setItem("razznama_auth", "true");
+                errorMsg.style.display = "none";
+                checkAuth();
+            } else {
+                errorMsg.style.display = "block";
+            }
+        }
+
+        function logout() {
+            sessionStorage.removeItem("razznama_auth");
+            location.reload();
+        }
+
+        // Enter key listener
+        document.getElementById("passcode").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                unlockDashboard();
+            }
+        });
+
+        checkAuth();
+    </script>
 </body>
-  </html>
-  
+</html>
