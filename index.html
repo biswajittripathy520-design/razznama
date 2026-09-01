@@ -17,15 +17,17 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;b
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#08090d 0%,#08090d88 43%,transparent 78%),linear-gradient(0deg,#08090d 0%,transparent 38%)}
 .hero-content{position:relative;z-index:2;padding:90px 0;max-width:650px}.eyebrow{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:700}
 h1{font-family:Georgia,serif;font-size:clamp(55px,9vw,104px);line-height:.86;margin:18px 0 8px;letter-spacing:2px}.hero h2{font-family:Georgia,serif;color:#d9c28c;font-size:25px;margin:0 0 22px}.hero p{color:#c0beb9;line-height:1.8;max-width:590px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:13px 20px;border:1px solid #705a32;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px}.btn.primary{background:var(--gold);color:#111}.btn:hover{transform:translateY(-2px)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:13px 20px;border:1px solid #705a32;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;display:inline-block}.btn.primary{background:var(--gold);color:#111}.btn:hover{transform:translateY(-2px)}
 .section{padding:72px 0;border-bottom:1px solid #20222a}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.head span{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#9c7b42}.head h2{font-family:Georgia,serif;font-size:34px;margin:5px 0 0}.view{font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:1px}
-.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}.art{min-height:420px;border:1px solid #3b3544;background:radial-gradient(circle at 60% 35%,#725c82 0,#31283c 30%,#14131c 66%,#0d0e13 100%);position:relative;overflow:hidden}.art:before{content:"";position:absolute;width:230px;height:330px;left:50%;top:50px;transform:translateX(-50%);border-radius:48% 48% 20% 20%;background:linear-gradient(160deg,#252535,#101018);box-shadow:0 0 70px #d6b76633}.art:after{content:"DIVINE ASCENT";position:absolute;bottom:22px;left:25px;font-family:Georgia,serif;font-size:34px;letter-spacing:3px;color:#f0d795;text-shadow:0 2px 12px #000}
+.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+.art-cover{min-height:420px;border:1px solid #3b3544;background:#14131c;border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.art-cover img{width:100%;height:100%;max-height:540px;object-fit:cover;display:block}
 .feature-copy{padding:35px;border:1px solid var(--line);background:linear-gradient(145deg,var(--panel2),var(--panel))}.tag{display:inline-block;border:1px solid #55462d;color:var(--gold);font-size:9px;letter-spacing:2px;padding:7px 10px;text-transform:uppercase}.feature-copy h3{font-family:Georgia,serif;font-size:36px;margin:18px 0 4px}.feature-copy .sub{color:#cbb77f;font-family:Georgia,serif}.feature-copy p{color:var(--muted);line-height:1.8}.meta{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0}.pill{background:#22242d;padding:7px 10px;color:#aaa;font-size:10px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.series{border:1px solid var(--line);background:var(--panel);overflow:hidden;transition:.2s}.series:hover{transform:translateY(-4px);border-color:#5b4b34}.cover{height:240px;display:flex;align-items:flex-end;padding:18px;background:radial-gradient(circle at 50% 30%,#554969,#20212b 55%,#101117);font-family:Georgia,serif;font-size:25px;color:#e5cd91}.cover.two{background:radial-gradient(circle at 50% 25%,#40566a,#1b2831 52%,#0d1115)}.cover.three{background:radial-gradient(circle at 50% 30%,#62433f,#251719 55%,#0d0a0b)}.series-body{padding:18px}.series-body h3{font-family:Georgia,serif;margin:0 0 5px;font-size:20px}.series-body p{font-size:12px;color:#92918d;line-height:1.6;margin:8px 0}.status{font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--gold)}
-.updates{display:grid;grid-template-columns:1fr 1fr;gap:14px}.update{display:flex;gap:17px;padding:18px;border:1px solid var(--line);background:var(--panel)}.num{font-family:Georgia,serif;font-size:24px;color:var(--gold)}.update h3{font-family:Georgia,serif;margin:0 0 5px}.update p{margin:0;color:#8e8d88;font-size:12px}
+.updates{display:grid;grid-template-columns:1fr 1fr;gap:14px}.update{display:flex;gap:17px;padding:18px;border:1px solid var(--line);background:var(--panel);transition:.2s}.update:hover{border-color:var(--gold);transform:translateY(-2px)}.num{font-family:Georgia,serif;font-size:24px;color:var(--gold)}.update h3{font-family:Georgia,serif;margin:0 0 5px}.update p{margin:0;color:#8e8d88;font-size:12px}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:20px}.aboutbox{padding:32px;background:linear-gradient(145deg,#171922,#0e0f14);border:1px solid var(--line)}.aboutbox h3{font-family:Georgia,serif;color:#dfc486;font-size:26px;margin-top:0}.aboutbox p{color:#a8a6a1;line-height:1.8}
 footer{padding:42px 0;text-align:center;color:#6e6d69;font-size:11px;letter-spacing:1px}footer strong{font-family:Georgia,serif;color:var(--gold);font-size:18px}
-@media(max-width:800px){.links{display:none}.hero{min-height:620px}.feature,.about{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.updates{grid-template-columns:1fr}.art{min-height:350px}}
+@media(max-width:800px){.links{display:none}.hero{min-height:620px}.feature,.about{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.updates{grid-template-columns:1fr}.art-cover{min-height:350px}}
 @media(max-width:520px){.grid{grid-template-columns:1fr}.hero-content{padding:75px 0}.head{align-items:start;gap:10px;flex-direction:column}h1{font-size:58px}}
 </style>
 </head>
@@ -34,7 +36,13 @@ footer{padding:42px 0;text-align:center;color:#6e6d69;font-size:11px;letter-spac
 <header class="nav">
   <div class="container navin">
     <a class="brand" href="#home">RAZZNAMA<small>STORIES BEYOND THE ORDINARY</small></a>
-    <nav class="links"><a href="#home">Home</a><a href="#series">Series</a><a href="series/divine-ascent/chapter-01.html">Latest</a><a href="#about">About</a></nav>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#series">Series</a>
+      <a href="series/divine-ascent/chapter-01.html">Latest</a>
+      <a href="dashboard/index.html">Dashboard</a>
+      <a href="#about">About</a>
+    </nav>
   </div>
 </header>
 
@@ -55,7 +63,9 @@ footer{padding:42px 0;text-align:center;color:#6e6d69;font-size:11px;letter-spac
   <div class="container">
     <div class="head"><div><span>Featured Series</span><h2>Editor's Pick</h2></div><a class="view" href="#series">View all →</a></div>
     <div class="feature">
-      <div class="art" aria-label="Divine Ascent cover artwork placeholder"></div>
+      <div class="art-cover">
+        <img src="series/divine-ascent/cover%20image.png" alt="Divine Ascent Official Poster">
+      </div>
       <div class="feature-copy">
         <span class="tag">Featured · Ongoing</span>
         <h3>Divine Ascent</h3>
@@ -73,7 +83,14 @@ footer{padding:42px 0;text-align:center;color:#6e6d69;font-size:11px;letter-spac
   <div class="container">
     <div class="head"><div><span>Razznama Library</span><h2>Our Series</h2></div></div>
     <div class="grid">
-      <article class="series"><div class="cover">Divine Ascent</div><div class="series-body"><div class="status">Ongoing</div><h3>Divine Ascent</h3><p>Rise of the Celestial Heir — a cultivation fantasy about destiny, bloodlines and the road beyond the heavens.</p></div></article>
+      <a href="series/divine-ascent/chapter-01.html" class="series">
+        <div class="cover">Divine Ascent</div>
+        <div class="series-body">
+          <div class="status">Ongoing</div>
+          <h3>Divine Ascent</h3>
+          <p>Rise of the Celestial Heir — a cultivation fantasy about destiny, bloodlines and the road beyond the heavens.</p>
+        </div>
+      </a>
       <article class="series"><div class="cover two">Coming Soon</div><div class="series-body"><div class="status">In Development</div><h3>Series Two</h3><p>A new original story is being prepared for the Razznama library.</p></div></article>
       <article class="series"><div class="cover three">Coming Soon</div><div class="series-body"><div class="status">In Development</div><h3>Series Three</h3><p>Another world, another legend. Details will be revealed soon.</p></div></article>
     </div>
@@ -84,8 +101,8 @@ footer{padding:42px 0;text-align:center;color:#6e6d69;font-size:11px;letter-spac
   <div class="container">
     <div class="head"><div><span>Fresh from the studio</span><h2>Latest Chapters</h2></div></div>
     <div class="updates">
-      <a class="update" href="#"><div class="num">02</div><div><h3>Divine Ascent — Shadows of the Past</h3><p>Strange memories awaken as an unknown force begins to move.</p></div></a>
-      <a class="update" href="#"><div class="num">01</div><div><h3>Divine Ascent — The Mysterious Invitation</h3><p>An unexpected summons changes Yue Han's fate forever.</p></div></a>
+      <a class="update" href="series/divine-ascent/chapter-02.html"><div class="num">02</div><div><h3>Divine Ascent — Shadows of the Past</h3><p>Strange memories awaken as an unknown force begins to move.</p></div></a>
+      <a class="update" href="series/divine-ascent/chapter-01.html"><div class="num">01</div><div><h3>Divine Ascent — The Mysterious Invitation</h3><p>An unexpected summons changes Yue Han's fate forever.</p></div></a>
     </div>
   </div>
 </section>
