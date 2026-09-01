@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Ascent - Chapter 2: Shadows of the Past | Razznama</title>
+    <style>
+        :root {
+            --bg-dark: #0b0c10;
+            --bg-panel: #151821;
+            --accent-gold: #e5a93c;
+            --accent-crimson: #c93b3b;
+            --text-light: #f0f2f5;
+            --text-muted: #8c93a4;
+            --border-color: #222736;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--bg-panel);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand {
+            font-weight: 800;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .chapter-nav {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .nav-btn {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 1px solid var(--border-color);
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .reader-container {
+            width: 100%;
+            max-width: 720px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem 1rem;
+            gap: 1.5rem;
+        }
+
+        .chapter-header {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .series-title {
+            color: var(--accent-gold);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .chapter-title {
+            font-size: 1.4rem;
+            margin-top: 0.3rem;
+        }
+
+        .comic-panel {
+            width: 100%;
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .panel-placeholder {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 80%;
+        }
+
+        .speech-bubble {
+            background: #ffffff;
+            color: #111;
+            padding: 0.8rem 1.2rem;
+            border-radius: 18px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .footer-nav {
+            margin: 2rem 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-action {
+            background-color: var(--accent-gold);
+            color: #000;
+            font-weight: 700;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="brand">RAZZNAMA</a>
+        <div class="chapter-nav">
+            <a href="chapter-01.html" class="nav-btn">← Ch. 1</a>
+            <a href="../../index.html" class="nav-btn">Library</a>
+        </div>
+    </header>
+
+    <div class="reader-container">
+        <div class="chapter-header">
+            <div class="series-title">Divine Ascent: Rise of the Celestial Heir</div>
+            <h1 class="chapter-title">Chapter 2: Shadows of the Past</h1>
+        </div>
+
+        <div class="comic-panel">
+            <div class="panel-placeholder">
+                [ Scene: Dark clouds gather over the mountain pass as silhouettes begin to emerge from the dense trees. ]
+            </div>
+            <div class="speech-bubble">"You won't leave this valley alive, heir of the Yue clan."</div>
+        </div>
+
+        <div class="comic-panel">
+            <div class="panel-placeholder">
+                [ Yue Han draws a glowing talisman from his robes, his eyes sharpening with focused intent. ]
+            </div>
+            <div class="speech-bubble">"You were sent by the elders, weren't you?"</div>
+        </div>
+
+        <div class="comic-panel">
+            <div class="panel-placeholder">
+                [ A flash of crimson and gold sparks across the cliffside as battle ignites. ]
+            </div>
+            <div class="speech-bubble">"Let's see if your strength matches your arrogance!"</div>
+        </div>
+
+        <div class="footer-nav">
+            <a href="chapter-01.html" class="nav-btn" style="padding: 0.7rem 1.2rem;">← Chapter 1</a>
+            <a href="../../index.html" class="btn-action">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
